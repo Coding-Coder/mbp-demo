@@ -46,7 +46,7 @@ public class MbpGeneratorApplication extends Generator {
 
         //如需继承类时设置
 //        realPathCondition.setBaseEntity(GeneratorCondition.BaseEntityEnum.SELF);
-//        realPathCondition.setSelfBaseEntityPath("com.moon.mbp.example.bean.BasicEntity");
+//        realPathCondition.setSelfBaseEntityPath("com.lxy.mbp.example.bean.BasicEntity");
 //        String[] selfEntity = {"create_time", "update_time", "is_del"};
 //        realPathCondition.setSelfBaseEntityCommon(selfEntity);
 

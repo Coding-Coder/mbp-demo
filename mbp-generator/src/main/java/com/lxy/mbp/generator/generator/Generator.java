@@ -212,15 +212,15 @@ public class Generator {
 
             switch (var10) {
                 case 0:
-                    superEntityClass = "com.moon.mbp.example.bean.DateEntity";
+                    superEntityClass = "com.lxy.mbp.example.bean.DateEntity";
                     superEntityColumns = new String[]{"create_time", "update_time"};
                     break;
                 case 1:
-                    superEntityClass = "com.moon.mbp.example.bean.LogicDelEntity";
+                    superEntityClass = "com.lxy.mbp.example.bean.LogicDelEntity";
                     superEntityColumns = new String[]{"is_del"};
                     break;
                 case 2:
-                    superEntityClass = "com.moon.mbp.example.bean.BasicEntity";
+                    superEntityClass = "com.lxy.mbp.example.bean.BasicEntity";
                     superEntityColumns = new String[]{"create_time", "update_time", "is_del"};
                     break;
                 case 3:
