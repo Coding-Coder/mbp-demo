@@ -17,11 +17,16 @@ public class MbpGeneratorApplication extends Generator {
     private static String PASS_WORD = "root";
     private static String MYSQL_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static String ORACLE_DRIVER = "oracle.jdbc.driver.OracleDriver";
-    private static String PACKAGE_PATH = "com.lxy.mbp.generator";
+    private static String PACKAGE_PATH = "com.lxy.mybatis.plus";
 
     private static String[] TABLE_NAME = {"t_user"};
-    private static String[] TABLE_PREFIX = {};
+    private static String[] TABLE_PREFIX = {"t_"};
 
+    /**
+     * 当数据库中表字段为大写时会在实体类上生成@TableField("xxx")以及@TableId("xxx")
+     * 如果表字段为小写则不会生成这2个注解，需要手动添加
+     * @param args
+     */
     public static void main(String[] args) {
         //绝对地址生成
         GeneratorCondition realPathCondition = new GeneratorCondition();
@@ -32,11 +37,12 @@ public class MbpGeneratorApplication extends Generator {
         realPathCondition.setDbType(DbType.MYSQL);
         realPathCondition.setDriver(MYSQL_DRIVER);
         //生成的文件是否覆盖
-        realPathCondition.setIsFileOverride(Boolean.TRUE);
+        realPathCondition.setIsFileOverride(Boolean.FALSE);
         realPathCondition.setParentPackage(PACKAGE_PATH);
         realPathCondition.setTableName(TABLE_NAME);
         realPathCondition.setTablePrefix(TABLE_PREFIX);
         realPathCondition.setIsSwagger2(Boolean.FALSE);
+        realPathCondition.setIsActiveRecord(Boolean.TRUE);
         realPathCondition.setIsController(Boolean.TRUE);
         realPathCondition.setIsEntity(Boolean.TRUE);
         realPathCondition.setIsService(Boolean.TRUE);

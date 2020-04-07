@@ -91,7 +91,7 @@ public class Generator {
                 //生成的文件是否覆盖(全新文件)
                 .setFileOverride(condition.getIsFileOverride())
                 //是否支持AR
-                .setActiveRecord(false)
+                .setActiveRecord(condition.getIsActiveRecord())
                 //实体属性是否需要Swagger2注解
                 .setSwagger2(condition.getIsSwagger2())
                 //设置作者名字

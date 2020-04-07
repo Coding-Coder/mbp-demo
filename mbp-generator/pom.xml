@@ -40,6 +40,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
+        <!--MyBatis-Plus 从 3.0.3 之后移除了代码生成器与模板引擎的默认依赖，需要手动添加相关依赖：-->
         <!--mybatis-plus-generator-->
         <dependency>
             <groupId>com.baomidou</groupId>

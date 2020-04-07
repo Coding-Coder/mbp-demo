@@ -47,6 +47,10 @@ public class GeneratorCondition {
      */
     private String parentPackage;
     /**
+     * 是否支持AR
+     */
+    private Boolean isActiveRecord = true;
+    /**
      * 实体属性是否需要Swagger2注解
      */
     private Boolean isSwagger2 = false;
